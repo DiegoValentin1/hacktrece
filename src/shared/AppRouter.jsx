@@ -1,6 +1,10 @@
 import React, {useState} from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import MainCards from '../components/MainCards';
+import RegisterScreen from '../public/RegisterScreen';
+import LoginScreen from "../public/LoginScreen";
+import DevicesScreen from "../components/DevisesScreen";
+import ProfileScreen from "../components/ProfileScreen";
 import { GoHome, GoHomeFill } from "react-icons/go";
 import { MdDevicesOther } from "react-icons/md";
 import { IoLeafOutline, IoLeaf  } from "react-icons/io5";
@@ -16,6 +20,10 @@ function AppRouter() {
                         <Route path="/" element={<MainCards />} />
                         <Route path="/about" element={<>About</>} />
                         <Route path="/contact" element={<MainCert/>} />
+                          <Route path="/register" element={<RegisterScreen/>} />
+          <Route path="/login" element={<LoginScreen/>}/>
+          <Route path="/devices" element={<DevicesScreen/>}/>
+          <Route path="/profile" element={<ProfileScreen/>}/>
                     </Routes>
                 </div>
                 <div className='grid absolute bottom-0 h-[10vh] w-full place-items-center grid-cols-3  bg-[#e4e4e4]'>
