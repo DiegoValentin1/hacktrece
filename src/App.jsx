@@ -4,7 +4,9 @@ import AppRouter from './shared/AppRouter';
 
 function App() {
   return (
-    <AppRouter></AppRouter>
+    <AppRouter>
+
+    </AppRouter>
   );
 }
 

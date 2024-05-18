@@ -9,7 +9,7 @@ export default function MainCert() {
                 Bodega Principal Jiutepec
             </div>
             <div className='h-[72vh] w-full flex flex-col'>
-                <div className='w-full h-[18%] shadow-lg rounded-2xl p-3 flex flex-row'>
+                <div className='w-full h-auto shadow-lg rounded-2xl p-3 flex flex-row'>
                     <div className='w-3/4'>
                         <div className='w-full h-[30%] font-bold text-lg text-[#333]'>ISO 809000</div>
                         <div className='w-full h-[70%] flex flex-col text-gray-700'>
@@ -21,7 +21,7 @@ export default function MainCert() {
                     {true ? <div className='w-1/4 flex items-center justify-center text-[#1c8377]'><TiTick style={{height:"60px", width:"60px"}}/></div> :
                     <div className='w-1/4 flex items-center justify-center text-[#c1121f]'><ImCross style={{height:"35px", width:"35px"}}/></div>}
                 </div>
-                <div className='w-full h-[18%] shadow-lg rounded-2xl p-3 flex flex-row'>
+                <div className='w-full h-auto shadow-lg rounded-2xl p-3 flex flex-row'>
                     <div className='w-3/4'>
                         <div className='w-full h-[30%] font-bold text-lg text-[#333]'>ISO 809000</div>
                         <div className='w-full h-[70%] flex flex-col text-gray-700'>
@@ -33,7 +33,7 @@ export default function MainCert() {
                     {false ? <div className='w-1/4 flex items-center justify-center text-[#1c8377]'><TiTick style={{height:"60px", width:"60px"}}/></div> :
                     <div className='w-1/4 flex items-center justify-center text-[#c1121f]'><ImCross style={{height:"35px", width:"35px"}}/></div>}
                 </div>
-                <div className='w-full h-[18%] shadow-lg rounded-2xl p-3 flex flex-row'>
+                <div className='w-full h-auto shadow-lg rounded-2xl p-3 flex flex-row'>
                     <div className='w-3/4'>
                         <div className='w-full h-[30%] font-bold text-lg text-[#333]'>ISO 809000</div>
                         <div className='w-full h-[70%] flex flex-col text-gray-700'>

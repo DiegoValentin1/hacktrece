@@ -12,14 +12,14 @@ const onFinishFailed = (errorInfo) => {
 };
 
 const LoginScreen = () => (
-  <div className="flex justify-center items-center h-screen"
+  <div className="flex justify-center items-center h-100vh"
     style={{
       backgroundImage: `url(${fondo})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       width: '100%',
-      height: '100%'
+      height: '100vh'
     }}
   >
     <Form
