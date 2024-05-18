@@ -14,7 +14,6 @@ const DevicesScreen = () => {
 
   const fetchDevices = async () => {
     try{
-
       const response = await AxiosClient({
         method: "GET",
         url: '/electronic-device/building/c68a8e89-35c1-41bb-b2fa-38f545eb546d',
@@ -28,12 +27,12 @@ const DevicesScreen = () => {
     }
   };
 
-  const filtrar = ()=>{
-
-  }
 
   useEffect(() => {
     fetchDevices();
+    setInterval(() => {
+      fetchDevices();
+    }, 2000);
   }, []);
 
   const changeStatus = async (id) => {
@@ -54,15 +53,15 @@ const DevicesScreen = () => {
     <div className="flex justify-center pt-3 w-full flex-col">
       <div className="flex justify-center w-full h-[7vh] flex-col">
         <label htmlFor="price" className="block text-lg font-semibold leading-6 mb-1 text-[#1c8377]">
-          Buscar
+          Consumo Al Instante
         </label>
-        <input
-          type="text"
-          name="price"
-          id="price"
-          className="block w-full rounded-md border-0 text-gray-900 ring-1 ring-inset ring-[#1c8377] placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#277269] sm:text-sm sm:leading-6"
-          placeholder="Sistema de Refrigeración"
-        />
+        <div className='text-3xl'>{devices.reduce((acum, item)=>{
+          if (item.status) {
+            return (item.consumption * 1.019) + acum
+          } else {
+            return acum + 0;
+          }
+         }, 0).toFixed(2)}</div>
       </div>
       <div className='h-[77vh] w-full flex flex-col py-4 gap-3'>
         {devices && devices.map((item) =>
